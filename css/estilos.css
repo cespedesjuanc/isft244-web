@@ -579,6 +579,16 @@ p { margin: 0; }
 }
 .contact__map:hover .map__open { background: var(--neon-green); color: var(--void); }
 
+/* Mapa real de Google dentro del círculo (el dibujo queda de respaldo detrás) */
+.contact__mapwrap { display: grid; justify-items: center; gap: 22px; justify-self: center; width: 100%; max-width: 440px; }
+.contact__mapwrap .contact__map { max-width: none; }
+.map__frame {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 50%;
+  z-index: 1;
+}
+.contact__map .map { position: absolute; inset: 0; }
+.contact__mapwrap .contact__map:hover .map { transform: none; }
+
 /* ---------- Footer ---------- */
 .foot { background: var(--void); border-top: 1px solid var(--glass-line); padding: 40px 0; font-size: .925rem; color: var(--dim); }
 .foot__grid { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; }
